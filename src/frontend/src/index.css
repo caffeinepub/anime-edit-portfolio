@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark cinematic theme – primary */
+    --background: 0.09 0.012 250;
+    --foreground: 0.97 0.005 250;
+    --card: 0.11 0.015 250;
+    --card-foreground: 0.97 0.005 250;
+    --popover: 0.12 0.015 250;
+    --popover-foreground: 0.97 0.005 250;
+    /* Cyan primary CTA */
+    --primary: 0.78 0.14 202;
+    --primary-foreground: 0.08 0.012 250;
+    /* Muted secondary */
+    --secondary: 0.15 0.018 250;
+    --secondary-foreground: 0.85 0.01 250;
+    --muted: 0.14 0.015 250;
+    --muted-foreground: 0.6 0.01 250;
+    /* Purple accent */
+    --accent: 0.55 0.24 300;
+    --accent-foreground: 0.97 0.005 250;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.22 0.02 250;
+    --input: 0.18 0.018 250;
+    --ring: 0.78 0.14 202;
+    /* Cyan */
+    --cyan: 0.78 0.14 202;
+    /* Teal */
+    --teal: 0.68 0.13 185;
+    /* Purple neon */
+    --neon-purple: 0.55 0.24 300;
+    /* Magenta */
+    --magenta: 0.63 0.22 330;
+    --chart-1: 0.78 0.14 202;
+    --chart-2: 0.55 0.24 300;
+    --chart-3: 0.68 0.13 185;
+    --chart-4: 0.63 0.22 330;
+    --chart-5: 0.75 0.18 250;
+    --sidebar: 0.1 0.013 250;
+    --sidebar-foreground: 0.97 0.005 250;
+    --sidebar-primary: 0.78 0.14 202;
+    --sidebar-primary-foreground: 0.08 0.012 250;
+    --sidebar-accent: 0.15 0.018 250;
+    --sidebar-accent-foreground: 0.85 0.01 250;
+    --sidebar-border: 0.22 0.02 250;
+    --sidebar-ring: 0.78 0.14 202;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 20px oklch(0.78 0.14 202 / 0.4), 0 0 40px
+      oklch(0.78 0.14 202 / 0.15);
+  }
+  .glow-purple {
+    box-shadow: 0 0 20px oklch(0.55 0.24 300 / 0.5), 0 0 40px
+      oklch(0.55 0.24 300 / 0.2);
+  }
+  .glow-text-cyan {
+    text-shadow: 0 0 20px oklch(0.78 0.14 202 / 0.8);
+  }
+  .border-glow-purple {
+    border: 1px solid oklch(0.55 0.24 300 / 0.6);
+    box-shadow: 0 0 15px oklch(0.55 0.24 300 / 0.3), inset 0 0 15px
+      oklch(0.55 0.24 300 / 0.05);
+  }
+  .border-glow-cyan {
+    border: 1px solid oklch(0.78 0.14 202 / 0.6);
+    box-shadow: 0 0 15px oklch(0.78 0.14 202 / 0.3), inset 0 0 15px
+      oklch(0.78 0.14 202 / 0.05);
+  }
+  .bg-hero-gradient {
+    background: radial-gradient(
+      ellipse at center,
+      oklch(0.12 0.02 250 / 0.85) 30%,
+      oklch(0.06 0.01 250 / 0.97) 100%
+    );
+  }
+  .gradient-text-cyan {
+    background: linear-gradient(
+      135deg,
+      oklch(0.78 0.14 202),
+      oklch(0.68 0.13 185)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
